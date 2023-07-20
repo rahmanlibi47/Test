@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+
+<title>{% block title %}Add Hero{% endblock title %}</title>
+
+{% block content %}
+
+<h1>Add your hero</h1>
+<form method="post">
+  {% csrf_token%} {{ form.as_table}}
+  <input type="submit" value="Add Heroes" />
+</form>
+
+{% endblock content %}

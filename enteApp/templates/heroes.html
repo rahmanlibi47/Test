@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+
+<title>{% block title %}Heroes{% endblock title %}</title>
+
+{% block content %}
+
+<!-- For Loop -->
+{% for hero in heroes%}
+<hr />
+<li>Name : {{hero.name}}</li>
+<li>Power : {{hero.power}}</li>
+<li>Universe : {{hero.universe}}</li>
+<hr />
+{% endfor %}
+
+<!-- End For Loop -->
+
+<a href="{% url 'add_hero'%}">Add your hero</a>
+
+{% endblock content %}

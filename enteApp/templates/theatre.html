@@ -1,0 +1,14 @@
+{% extends 'base.html'%} {%load static%}
+
+<title>{% block title %}Theatre{% endblock title %}</title>
+
+{% block content %}
+
+<style>
+  html {
+    background-image: url("{% static 'movie.jpg'%}");
+    background-size: 100%;
+  }
+</style>
+
+{% endblock content %}
